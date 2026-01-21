@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 20% 4%;
+    --foreground: 330 30% 95%;
+
+    --card: 270 15% 8%;
+    --card-foreground: 330 30% 95%;
+
+    --popover: 270 15% 8%;
+    --popover-foreground: 330 30% 95%;
+
+    --primary: 330 85% 60%;
+    --primary-foreground: 270 20% 4%;
+
+    --secondary: 320 70% 45%;
+    --secondary-foreground: 330 30% 95%;
+
+    --muted: 270 15% 15%;
+    --muted-foreground: 330 20% 65%;
+
+    --accent: 340 100% 70%;
+    --accent-foreground: 270 20% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 330 30% 20%;
+    --input: 330 30% 20%;
+    --ring: 330 85% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(330 85% 60%) 0%, hsl(300 80% 50%) 50%, hsl(280 90% 55%) 100%);
+    --gradient-glow: linear-gradient(180deg, hsl(330 85% 60% / 0.3) 0%, transparent 100%);
+    --gradient-card: linear-gradient(135deg, hsl(270 15% 10%) 0%, hsl(300 20% 8%) 100%);
+    --gradient-hero: radial-gradient(ellipse at 50% 0%, hsl(330 85% 60% / 0.15) 0%, transparent 50%);
+    
+    --shadow-glow: 0 0 40px hsl(330 85% 60% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-hover: 0 20px 60px hsl(330 85% 60% / 0.25);
+
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+
+    --sidebar-background: 270 15% 8%;
+    --sidebar-foreground: 330 30% 95%;
+    --sidebar-primary: 330 85% 60%;
+    --sidebar-primary-foreground: 270 20% 4%;
+    --sidebar-accent: 300 70% 45%;
+    --sidebar-accent-foreground: 330 30% 95%;
+    --sidebar-border: 330 30% 20%;
+    --sidebar-ring: 330 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl border border-white/10;
+    background: linear-gradient(135deg, hsl(270 15% 12% / 0.8) 0%, hsl(300 20% 10% / 0.6) 100%);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .poster-frame {
+    @apply relative overflow-hidden rounded-lg;
+    box-shadow: var(--shadow-card);
+  }
+
+  .poster-frame::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: var(--gradient-glow);
+  }
+
+  .poster-frame:hover::before {
+    @apply opacity-100;
+  }
+
+  .animated-border {
+    @apply relative;
+  }
+
+  .animated-border::after {
+    content: '';
+    @apply absolute -inset-[1px] rounded-lg opacity-0 transition-opacity duration-500;
+    background: var(--gradient-primary);
+    z-index: -1;
+    filter: blur(8px);
+  }
+
+  .animated-border:hover::after {
+    @apply opacity-60;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
