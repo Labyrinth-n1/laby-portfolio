@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Instagram, Twitter, Dribbble, MessageCircleCode } from 'lucide-react';
+import './ContactSection.css';
+
 
 const socialLinks = [
   { icon: MessageCircleCode, href: "#", label: "Message" },
@@ -41,8 +43,8 @@ export default function ContactSection() {
             className="glass-card rounded-2xl p-8 md:p-12 max-w-2xl mx-auto"
           >
             <a 
-              href="mailto:hello@example.com"
-              className="inline-flex items-center gap-3 text-2xl md:text-3xl font-display font-bold text-primary hover:text-accent transition-colors duration-300"
+              href="mailto:steenaadisso@gmail.com"
+              className="mailto inline-flex items-center gap-3 text-2xl md:text-3xl font-display font-bold text-primary hover:text-accent transition-colors duration-300"
             >
               <Mail className="w-8 h-8" />
               steenaadisso@gmail.com

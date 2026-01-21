@@ -1,0 +1,9 @@
+.mailto:hover
+{
+   background-color: #d5468e;
+   color: #fff;
+   padding: .75rem;
+   border-radius: 50px;
+   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+
+}
