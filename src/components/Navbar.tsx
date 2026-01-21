@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-
+import logo from '../assets/posters/logo-laby.png';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="font-display text-2xl font-bold text-gradient">
-          Portfolio
+          <img src={logo} alt="Logo" className="w-25 h-16" />
         </a>
 
         {/* Navigation Links */}
