@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { Mail, Instagram, Twitter, Dribbble } from 'lucide-react';
+import { Mail, Instagram, Twitter, Dribbble, MessageCircleCode } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: MessageCircleCode, href: "#", label: "Message" },
+   { icon: Instagram, href: "#", label: "Instagram" },
   { icon: Dribbble, href: "#", label: "Dribbble" },
-  { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+  { icon: Mail, href: "mailto:steenaadisso@gmail.com", label: "Email" },
 ];
 
 export default function ContactSection() {
