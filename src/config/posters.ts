@@ -33,7 +33,9 @@ import image9 from '../assets/posters/silenced-a297db431f680eda539ddc5a8a860c7d.
 import image10 from '../assets/posters/uncle_waffle-05e70c3e219362f6b15b54dd073e893b.png';
 import image11 from '../assets/posters/Votre texte de paragraphe(2).png';
 import image12 from '../assets/posters/Yaourt-78f0b924c2a6f8443950413e9a49986a.png';
-
+import image13 from '../assets/posters/Ajouter un titre(1).png';
+import image14 from '../assets/posters/XINO.png';
+import image15 from '../assets/posters/RUNWAY VIBES 2025”.png'; // Exemple d'ajout
 // ============================================
 // CATÉGORIES DISPONIBLES
 // ============================================
@@ -91,9 +93,9 @@ export const posters: Poster[] = [
   },
   {
     id: 5,
-     title: "Gloss party",
+    title: "RUNWAY VIBES 2025",
     category: "Design",
-    image: image5,
+    image: image15,
   },
   {
     id: 6,
@@ -142,6 +144,26 @@ export const posters: Poster[] = [
     title: "Yaourt",
     category: "Photo",
     image: image12,  
+  },
+
+  {
+    id: 13,
+    title: "Orphanage",
+    category: "Abstrait",
+    image: image13,  
+  },
+
+  {
+    id: 14,
+    title: "Octobre rose",
+    category: "Design",
+    image: image14,  
+  },
+  { 
+    id: 15,
+    title: "Gloss Party",
+    category: "Design",
+    image: image5,
   }
 
   // AJOUTEZ VOS AFFICHES CI-DESSOUS :
