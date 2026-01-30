@@ -66,12 +66,7 @@ export interface Poster {
 // =============================Think===============
 export const posters: Poster[] = [
   // Exemples avec images placeholder (à remplacer par vos affiches) :
-  {
-    id: 1,
-    title: "Think pink",
-    category: "Pinky",
-    image: image1,
-  },
+
   {
     id: 2,
     title: "Smile",
@@ -85,31 +80,11 @@ export const posters: Poster[] = [
     image: image2,
   },
   {
-    id: 4,
-    title: "Laby",
-    category: "Illustration",
-    image: image4,
-  },
-  {
     id: 5,
     title: "RUNWAY VIBES 2025",
     category: "Design",
     image: image15,
   },
-  {
-    id: 6,
-    title: "Nike",
-    category: "Illustration",
-    image: image6,
-  },
-  
-  {
-    id: 7,
-    title: "Shani",
-    category: "Illustration",
-    image: image7,  
-  },
-
   {
     id: 8,
     title: "Pyjama Party",
@@ -129,40 +104,6 @@ export const posters: Poster[] = [
     title: "Uncle Waffle",
     category: "Artistique",
     image: image10,  
-  },
-
-  {
-    id: 11,
-    title: "Imac",
-    category: "Typographie",
-    image: image11,  
-  },
-
-  {
-    id: 12,
-    title: "Yaourt",
-    category: "Illustration",
-    image: image12,  
-  },
-
-  {
-    id: 13,
-    title: "Orphanage",
-    category: "Abstrait",
-    image: image13,  
-  },
-
-  {
-    id: 14,
-    title: "Octobre rose",
-    category: "Design",
-    image: image14,  
-  },
-  { 
-    id: 15,
-    title: "Gloss Party",
-    category: "Pinky",
-    image: image5,
   }
   
 

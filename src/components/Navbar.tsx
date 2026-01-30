@@ -25,21 +25,16 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="font-display text-2xl font-bold text-gradient">
+        <a href="/" className="font-display text-2xl font-bold text-gradient">
           <img src={logo} alt="Logo" className="w-25 h-16" />
         </a>
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-8">
-          {['Accueil', 'Gallery', 'Contact'].map((item, index) => (
-            <a
-              key={item}
-              href={item === 'Accueil' ? '#' : `#${item.toLowerCase()}`}
-              className="relative text-foreground/70 hover:text-foreground transition-colors duration-300 font-medium story-link"
-            >
-              <span>{item}</span>
-            </a>
-          ))}
+          <a href="/">Acceuil</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/projects">Projects</a>
+          <a href="/contact">Contact</a>
         </div>
 
         {/* CTA Button */}

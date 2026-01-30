@@ -1,8 +1,11 @@
 import { motion, AnimatePresence } from 'framer-motion'; // Ajout de AnimatePresence
 import { useState } from 'react';
-import { posters, categories, getPostersByCategory, type Category, type Poster } from '@/config/posters2';
+import { posters, categories, getPostersByCategory, type Category, type Poster } from '@/config/posters';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
-export default function GallerySection() {
+
+export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState<Category>("Tous");
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   
@@ -12,11 +15,15 @@ export default function GallerySection() {
   const filteredPosters = getPostersByCategory(activeCategory);
 
   return (
-    <section id="gallery" className="relative py-24 px-6">
-      {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
-      
-      <div className="max-w-7xl mx-auto">
+      <section id="gallery" className="relative py-24 px-6">
+       
+
+       <Navbar />
+
+        {/* Background Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,12 +31,8 @@ export default function GallerySection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-4xl md:text-6xl font-bold mb-4">
-            <span className="text-gradient">Galerie</span>
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Découvrez quelques images de ma collection d'affiches créatives et uniques
-          </p>
+        
+          
         </motion.div>
 
         {/* Category Filter */}
@@ -137,29 +140,9 @@ export default function GallerySection() {
         {filteredPosters.length === 0 && (
           <div className="text-center py-16 text-muted-foreground">Aucune affiche trouvée.</div>
         )}
-
-        <a href="/gallery" >
-        <button className="seeallposters" 
-        style={{
-          marginTop: '20px',
-                  fontSize: '18px',
-                  fontWeight: '500',
-                  color:"#000",
-                  cursor: 'pointer',
-                  background: '#d5468e',
-                  padding: '10px 20px',
-                  borderRadius: '50px',
-                  display: 'inline-block',
-                  boxShadow: 'inset 0 0 10px #e14983',
-                  transition: 'background 0.3s ease',
-                  textAlign: 'center'
-          }}>
-          Voir toutes les affiches
-        </button>
-      </a>
       </div>
-      
-      
+
+      <Footer />    
     </section>
   );
 }

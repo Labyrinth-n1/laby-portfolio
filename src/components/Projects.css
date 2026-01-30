@@ -1,0 +1,296 @@
+.project-card
+{
+
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: transparent;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  /* On définit 3 colonnes de taille égale (1fr) */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; /* L'espace entre les cartes */
+  padding: 40px 20px;
+  max-width: 1200px; /* Largeur max pour ne pas que ce soit trop étiré */
+  margin: 0 auto; /* Centre la grille dans la page */
+}
+
+
+.project-category
+{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    margin-bottom: 0.5rem;
+    background-color: #ffc0cb;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: inset 0 0 10px #e14983;
+}
+
+.project-item-title
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    transform: uppercase;
+    margin-top: 5px;
+
+}
+
+
+.view-project-btn
+{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: inset 0 0 10px #e14983;
+}
+
+.projects-container
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-description
+{
+    margin-bottom: 25px;
+}
+
+.title
+{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.category-tag
+{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    margin-bottom: 0.5rem;
+    background-color: #ffc0cb;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: inset 0 0 10px #e14983;
+}
+
+
+/* Page Detail Container */
+.project-detail-page {
+    background-color: #000; /* Fond noir pour faire ressortir l'astro/béluga */
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+/* Grille de la Galerie */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colonnes égales auto-adaptatives */
+    gap: 20px;
+   
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px; /* Force une hauteur égale */
+    object-fit: cover; /* Recadre l'image sans la déformer */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+/* Style de la Modale Plein Écran */
+.fullscreen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+.fullscreen-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(225, 73, 131, 0.5); /* Rappel de ton rose */
+}
+
+/* L'arrière-plan sombre qui couvre tout */
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Voile noir très opaque */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: zoom-out;
+    animation: fadeIn 0.3s ease;
+}
+
+/* L'image en grand */
+.fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(225, 73, 131, 0.3); /* Lueur rose subtile */
+}
+
+/* Bouton fermer */
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+.project-detail-page {
+    background-color: #0d0d0d;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 60px 20px;
+    flex-grow: 1; /* Pousse le footer vers le bas */
+}
+
+/* Bouton Retour */
+
+
+/* Header du projet */
+.title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, #ffc0cb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.category-tag {
+    display: inline-block;
+    background: rgba(225, 73, 131, 0.2);
+    color: #ffc0cb;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid #e14983;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+}
+
+/* Section "À propos" */
+.content {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    line-height: 1.8;
+}
+
+.content h2 {
+    margin-bottom: 15px;
+    color: #ffc0cb;
+}
+
+/* Galerie d'images */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Modale Plein Écran */
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(10px);
+}
+
+.fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(225, 73, 131, 0.4);
+}

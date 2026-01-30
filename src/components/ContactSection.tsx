@@ -10,6 +10,24 @@ const socialLinks = [
   { icon: Mail, href: "mailto:steenaadisso@gmail.com", label: "Email" },
 ];
 
+function sendToWhatsapp() {
+  const phoneNumber = "2290157172160"
+  const message = document.getElementById('message').value;
+
+  if (message.trim() === "") {
+    alert("Le message est vide !");
+    return;
+  }
+
+  // encodeURIComponent transforme les caractères spéciaux et espaces pour l'URL
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  // Ouvre le lien dans un nouvel onglet
+  window.open(whatsappUrl, '_blank');
+}
+
+
 export default function ContactSection() {
   return (
     <section id="contact" className="relative py-24 px-6">
@@ -42,6 +60,7 @@ export default function ContactSection() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="glass-card rounded-2xl p-8 md:p-12 max-w-2xl mx-auto"
           >
+             
             <a 
               href="mailto:steenaadisso@gmail.com"
               className="mailto inline-flex items-center gap-3 text-2xl md:text-3xl font-display font-bold text-primary hover:text-accent transition-colors duration-300"
@@ -49,6 +68,14 @@ export default function ContactSection() {
               <Mail className="w-8 h-8" />
               steenaadisso@gmail.com
             </a>
+
+            <textarea name="message" placeholder='Votre message ici...' id="message" className="w-full h-32 p-4 mt-6 rounded-lg bg-background border border-border focus:outline-none focus:ring-2 focus:ring-primary" required>
+           
+            </textarea>
+
+            <button onClick={sendToWhatsapp} className="mt-4 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 transition-colors duration-300">
+              Envoyer le message par whatsapp 
+            </button>
             
             <div className="mt-10 pt-8 border-t border-border">
               <p className="text-muted-foreground mb-6">Retrouvez-moi aussi sur</p>

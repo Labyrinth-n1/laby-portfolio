@@ -44,7 +44,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <a 
-              href="#gallery" 
+              href="gallery" 
               className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-lg hover-lift glow-effect"
             >
               Explorer la Galerie
