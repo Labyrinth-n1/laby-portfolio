@@ -23,6 +23,7 @@
 // ============================================
 import image1 from '../assets/posters/1.png';
 import image2 from '../assets/posters/airpodmax-1aa6386a3b657a7067d033718accc40e.png';
+
 import image3 from '../assets/posters/Ajouter un titre.png';
 import image4 from '../assets/posters/Besoin d’une carte de visite .png';
 import image5 from '../assets/posters/labyrinth1-13f77b6e7a1f3878a602f9ed994727c8.png';
@@ -36,6 +37,8 @@ import image12 from '../assets/posters/Yaourt-78f0b924c2a6f8443950413e9a49986a.p
 import image13 from '../assets/posters/Ajouter un titre(1).png';
 import image14 from '../assets/posters/XINO.png';
 import image15 from '../assets/posters/RUNWAY VIBES 2025”.png'; // Exemple d'ajout
+import image16 from '../assets/posters/riz.png';
+import image17 from '../assets/posters/rag.png';
 // ============================================
 // CATÉGORIES DISPONIBLES
 // ============================================
@@ -163,7 +166,19 @@ export const posters: Poster[] = [
     title: "Gloss Party",
     category: "Pinky",
     image: image5,
-  }
+  },
+  { 
+    id: 16,
+    title: "Week Menu",
+    category: "Design",
+    image: image16,
+  },
+  { 
+    id: 17,
+    title: "Conference",
+    category: "Design",
+    image: image17,
+  },
   
 
   // AJOUTEZ VOS AFFICHES CI-DESSOUS :
